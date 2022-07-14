@@ -1,0 +1,18 @@
+<!--miniprogram/pages/qAnda/aAnda.wxml-->
+<view class="qAnda">
+
+<search-bar bind:publish="_handlerPublish" bind:search="_handlerSearch" class="searchBar"/>
+
+<block wx:for="{{questionList}}" wx:key="_id">
+  <question-card questionM="{{item}}"/>
+  <question-bar questionID="{{item._id}}"/>
+</block>
+<load-more isLoading="{{isLoadMore}}"/>
+<author-pane isModal="{{isModal}}" bind:authorSuccess="_handlerAuthorSuccess"/>
+</view>
+
+
+
+
+
+

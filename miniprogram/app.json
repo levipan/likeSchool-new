@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/qAnda/qAnda",
+    "pages/mine/mine",
+    "pages/qPublish/qPublish",
+    "pages/qDetail/qDetail",
+    "pages/myDataList/myDataList"
+  ],
+  "tabBar": {
+    "custom": false,
+    "color": "#707070",
+    "selectedColor": "#d4237a",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "撩课程",
+        "iconPath": "assets/images/tabbar/home_normal.png",
+        "selectedIconPath": "assets/images/tabbar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/qAnda/qAnda",
+        "text": "撩答疑",
+        "iconPath": "assets/images/tabbar/discover_normal.png",
+        "selectedIconPath": "assets/images/tabbar/discover_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "撩我",
+        "iconPath": "assets/images/tabbar/mine_normal.png",
+        "selectedIconPath": "assets/images/tabbar/mine_selected.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#d4237a",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wxa2c453d902cdd452"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于发布问题"
+    }
+  }
+}

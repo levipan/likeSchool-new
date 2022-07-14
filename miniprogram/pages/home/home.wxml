@@ -1,0 +1,75 @@
+<!--miniprogram/pages/home/home.wxml-->
+<home-container title="全栈直播班">
+  <view class="live-content">
+    <view class="top" bindtap="_handlerHref" data-mini="{{liveClass.jumpMiniPro}}">
+      <image src="{{liveClass.live_img}}" class="img" mode="aspectFill"></image>
+    </view>
+    <view class="bottom">
+
+      <view class="item" wx:for="{{liveClass.live_desc}}" wx:key="_id">
+        <view class="title">{{item.title}}</view>
+        <view class="desc">
+          <text wx:for="{{item.values}}" wx:key="num" wx:for-item="value" wx:for-index="num">{{num + 1 + ". " + value}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</home-container>
+
+<home-container title="最新公开课">
+  <view class="freeLive">
+    <swiper next-margin="60rpx" bindchange="_handlerChange">
+
+    <block wx:for="{{freeLive}}" wx:key="_id">
+     <swiper-item>
+          <view class="item" bindtap="_handlerHref" data-mini="{{item.jumpMini}}">
+            <image class="fm" src="{{item.liveFM}}" mode="aspectFill"></image>
+            <view class="time">直播时间: {{timeTool.getFormatTime(item.liveTime)}}</view>
+          </view>
+      </swiper-item>
+    </block>
+     
+    </swiper>
+    <view class="hot-comment">
+      <text class="title">热门\n时评</text>
+      <swiper class="comment" vertical circular autoplay >
+        <block wx:for="{{currentComments}}" wx:key="index">
+          <swiper-item>
+              <view class="item">
+                <image class="comment-header" src="{{item.pic_url}}" mode="scaleToFill"></image>
+                <view class="comment-content">{{item.first_comment}}</view>
+              </view>
+            </swiper-item>
+        
+        </block>
+      </swiper>
+    
+    </view>
+
+
+  </view>
+</home-container>
+
+<home-container title="学习路线">
+  <view>
+  <block wx:for="{{stageData}}" wx:key="_id">
+    <stage-card stageM="{{item}}"/>
+  </block>
+  <load-more isLoading="{{isLoading}}" bindtap="_handlerLoadMore"/>
+  </view>
+</home-container>
+
+<home-container title="关于撩课">
+  <view>
+    <video src="{{videoInfo.videoURL}}" class="videoPane"></video>
+  </view>
+</home-container>
+
+<view class="end">---power by itlike.com---</view>
+
+
+<button open-type="contact" class="contact">
+  <image src="/assets/images/xl.png" class="xl"></image>
+</button>
+
+<wxs module="timeTool" src="../../tools/timeFormat.wxs" />

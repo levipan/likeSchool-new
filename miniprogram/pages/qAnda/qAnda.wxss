@@ -1,0 +1,11 @@
+/* miniprogram/pages/qAnda/aAnda.wxss */
+.qAnda {
+  padding-top: 80rpx;
+}
+.searchBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}

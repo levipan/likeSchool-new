@@ -1,0 +1,7 @@
+
+<block wx:for="{{questionList}}" wx:key="_id">
+
+  <question-card questionM="{{item}}"/>
+  <question-bar questionID="{{item._id}}"/>
+
+</block>

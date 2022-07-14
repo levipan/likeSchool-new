@@ -1,0 +1,7 @@
+<mp modalTitle="用户授权" isModal="{{isModal}}">
+  <view class="authorPane">
+      <image src="/assets/images/xl.png" class="logo"></image>
+      <view class="desc">友情提示: 此操作, 需要获取您的个人头像以及昵称信息, 请授权</view>
+      <button open-type="getUserInfo" bindgetuserinfo="_handlerUserInfor" type="primary" class="authorBtn">点击获取用户信息</button>
+  </view>
+</mp>

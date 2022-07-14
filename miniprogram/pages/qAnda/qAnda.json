@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "search-bar": "/components/searchBar/searchBar",
+    "author-pane": "/components/authorPane/authorPane",
+    "question-card": "/components/questionCard/questionCard",
+    "question-bar": "/components/questionBar/questionBar",
+    "load-more": "/components/loadMore/loadMore"
+  },
+  "navigationBarTitleText": "撩答疑",
+  "enablePullDownRefresh": true
+}

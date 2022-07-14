@@ -1,0 +1,59 @@
+function getFormatTime(date) {
+  var dateV = getDate(date)
+  // 获取年月日  时分秒
+  var year = dateV.getFullYear()
+  var month = dateV.getMonth() + 1
+  month = month < 10 ? "0" + month: month
+  var day = dateV.getDate()
+  day = day < 10 ? "0" + day : day
+
+  var hour = dateV.getHours()
+  hour = hour < 10 ? "0" + hour : hour
+  var mini = dateV.getMinutes()
+  mini = mini < 10 ? "0" + mini : mini
+  var second = dateV.getSeconds()
+  second = second < 10 ? "0" + second : second
+
+  return [year, month, day].join("-") + " " + [hour, mini, second].join(":")
+}
+
+
+function getShowTime(date) {
+  var lastDate = getDate(date)
+  var nowDate = getDate()
+  var cha = nowDate.getTime() - lastDate.getTime()
+  var s_cha = parseInt(cha / 1000)
+  if (s_cha < 60) {
+    return s_cha + "秒之前"
+  }
+  if (s_cha < 60 * 60) {
+    return parseInt(s_cha / 60) + "分钟之前"
+  }
+  if (s_cha < 60 * 60 * 24) {
+    return parseInt(s_cha / 3600) + "小时之前"
+  }
+
+  var dateV = lastDate
+  // 获取年月日  时分秒
+  var year = dateV.getFullYear()
+  var month = dateV.getMonth() + 1
+  month = month < 10 ? "0" + month : month
+  var day = dateV.getDate()
+  day = day < 10 ? "0" + day : day
+
+  var hour = dateV.getHours()
+  hour = hour < 10 ? "0" + hour : hour
+  var mini = dateV.getMinutes()
+  mini = mini < 10 ? "0" + mini : mini
+  var second = dateV.getSeconds()
+  second = second < 10 ? "0" + second : second
+
+  return [year, month, day].join("-") + " " + [hour, mini, second].join(":")
+
+}
+
+
+module.exports = {
+  getFormatTime: getFormatTime,
+  getShowTime: getShowTime
+}

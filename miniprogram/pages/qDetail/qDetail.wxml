@@ -1,0 +1,14 @@
+<question-card questionM="{{questionM}}"/>
+
+<view class="commentPane">
+  <view class="top">答案列表</view>
+  <view class="commentList">
+    <block wx:for="{{commentList}}" wx:key="_id">
+      <comment-card commentM="{{item}}"/>
+    </block>
+  </view>
+  <load-more isLoading="{{isLoading}}" bindtap="_handlerLoadMore"/>
+</view>
+
+
+<question-bar questionID="{{questionID}}" class="qb" bind:answerSuccessEvent="_handlerAnswerSuccess"/>

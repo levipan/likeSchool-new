@@ -1,0 +1,50 @@
+<view class="questionCard">
+  <view class="top">
+    <image class="headerImg" src="{{questionM.userInfo.avatarUrl}}"/>
+    <view class="otherMsg">
+      <view class="name">{{questionM.userInfo.nickName}}</view>
+      <view class="time">
+        <text>{{timeTool.getShowTime(questionM.createTime)}}</text>
+        <text decode>&nbsp;&nbsp;&nbsp;来自: {{questionM.deviceMsg}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="content" bind:tap="_handlerDetail">
+    <view class="text">{{questionM.question.qContent}}</view>
+    <!-- style1 style24 style356789 -->
+    <view class="{{styleTool.getStyle(questionM.question.fileIDs.length)}}">
+      <block wx:for="{{questionM.question.fileIDs}}" wx:key="index">
+        <image mode="aspectFill" src="{{item}}" data-src="{{item}}" catch:tap="_handlerPreviewImage"/>
+      </block>
+    </view>
+  </view>
+
+  <view class="location iconfont icon-location" wx:if="{{questionM.userLocation.name.length>0}}">
+      {{questionM.userLocation.name}}
+  </view>
+
+</view>
+
+<wxs module="timeTool" src="../../tools/timeFormat.wxs"/>
+<wxs module="styleTool">
+  function getStyle(imageCount) {
+    switch(imageCount) {
+      case 1: 
+        return "style1"
+      case 2: 
+      case 4:
+        return "style24"
+      case 3:
+      case 5:
+      case 6:
+      case 7:
+      case 8:
+      case 9:
+        return "style356789"
+    }
+  }
+  module.exports = {
+    getStyle: getStyle
+  }
+</wxs>

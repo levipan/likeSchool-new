@@ -1,0 +1,81 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"appid": "wx3485667d202ed085",
+	"projectname": "likeSchool-new",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "撩答疑",
+					"pathName": "pages/qAnda/aAnda",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "撩答疑",
+					"pathName": "pages/qAnda/qAnda",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "撩我",
+					"pathName": "pages/mine/mine",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/qPublish/qPublish",
+					"pathName": "pages/qPublish/qPublish",
+					"scene": null
+				}
+			]
+		}
+	}
+}
